@@ -1,0 +1,36 @@
+body {
+  background: turquoise;
+}
+
+.crono {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  top: 80px;
+}
+
+.buttons button {
+  width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 12px;
+  font-family: "Roboto";
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid black;
+}
+
+.buttons button:hover {
+  color: black;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
