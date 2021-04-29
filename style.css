@@ -35,3 +35,40 @@ body {
   background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
+.pausar {
+  display: none;
+}
+
+.resetar {
+  display: none;
+}
+
+.pausar.iniciado {
+  display: inline;
+  animation: slide-left 0.7s forwards;
+}
+
+.resetar.iniciado {
+  display: inline;
+  animation: slide-left 0.7s forwards;
+}
+
+.iniciar {
+  animation: slide-left 0.7s forwards;
+}
+
+.iniciar.removido {
+  display: none;
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

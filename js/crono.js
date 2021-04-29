@@ -2,6 +2,7 @@ export default function cronometro() {
   let display = document.querySelector(".crono p");
   const btnIniciar = document.querySelector(".iniciar");
   const btnPausar = document.querySelector(".pausar");
+  const btnResetar = document.querySelector(".resetar");
 
   let seconds = 0;
   let minutes = 0;
@@ -48,11 +49,14 @@ export default function cronometro() {
     }
 
     btnPausar.addEventListener("click", pauseStopwatch);
-    btnPausar.addEventListener("dblclick", resetStopwatch);
+    btnResetar.addEventListener("click", resetStopwatch);
 
     function pauseStopwatch() {
       clearInterval(timeLoop);
       btnIniciar.removeAttribute("disabled");
+
+      btnPausar.classList.remove("iniciado");
+      btnIniciar.classList.remove("removido");
     }
 
     function resetStopwatch() {
@@ -61,6 +65,12 @@ export default function cronometro() {
       seconds = 0;
       minutes = 0;
       hours = 0;
+
+      btnIniciar.classList.remove("removido");
+      btnPausar.classList.remove("iniciado");
+      btnResetar.classList.remove("iniciado");
+
+      btnIniciar.removeAttribute("disabled");
     }
   }
 }
