@@ -35,8 +35,8 @@ export default function cronometro() {
         displayHours = "0" + hours.toString();
       }
 
-      if (seconds === 60) {
-        seconds = 0;
+      if (seconds === 59) {
+        seconds = -1;
         minutes++;
       }
       if (minutes === 60) {
